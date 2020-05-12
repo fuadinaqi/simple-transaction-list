@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  align-items: center;
+}
+
+/* change border radius on search input ui */
+.container input {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* change border radius on select option ui */
+.container > div:last-of-type > div:first-of-type {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}

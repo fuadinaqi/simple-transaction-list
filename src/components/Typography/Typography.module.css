@@ -1,0 +1,79 @@
+h1 {
+  font-size: 4rem;
+  margin: 0;
+}
+
+h2 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+h3 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+span {
+  font-size: 1.15rem;
+  line-height: 1.75rem;
+}
+
+.primary {
+  color: #333333;
+}
+
+.secondary {
+  color: #FFFFFF;
+}
+
+.tertiary {
+  color: #fd6542;
+}
+
+.light {
+  font-weight: 300;
+}
+
+.regular {
+  font-weight: 400;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.unset {
+  text-align: unset;
+}
+
+.left {
+  text-align: left;
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+.justify {
+  text-align: justify;
+}
+
+.transform-unset {
+  text-transform: unset;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}

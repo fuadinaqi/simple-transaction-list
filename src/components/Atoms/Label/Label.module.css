@@ -1,0 +1,13 @@
+.container {
+  padding: .5rem .75rem;
+  border-radius: 6px;
+}
+
+.success {
+  background-color: #56b586;
+  color: #ffffff;
+}
+
+.pending {
+  border: solid 2px #fd6542;
+}

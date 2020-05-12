@@ -1,0 +1,19 @@
+.wrapper {
+  margin-top: 1rem;
+}
+
+.container {
+  display: flex;
+}
+
+.content {
+  margin-left: 1.15rem;
+}
+
+.content > span {
+  display: block;
+}
+
+.title:not(:first-child) {
+  margin-top: 1rem;
+}

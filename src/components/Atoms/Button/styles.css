@@ -1,0 +1,14 @@
+button {
+  font-family: inherit;
+  border: solid 2px #fd6542;
+  background: #fff;
+  border-radius: 6px;
+  padding: .5rem 1rem;
+  color: #fd6542;
+  font-size: 1.15rem;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: 0;
+}

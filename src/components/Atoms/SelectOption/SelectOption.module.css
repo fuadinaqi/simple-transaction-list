@@ -1,0 +1,50 @@
+.pa {
+  padding: 11.5px;
+}
+
+.pr {
+  padding-right: 12px;
+}
+
+.container {
+  position: relative;
+  cursor: pointer;
+  width: 250px;
+}
+
+.title {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+
+.title span {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.content {
+  position: absolute;
+  padding: 12px 0;
+  width: 100%;
+  box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+
+.active {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.item:hover {
+  background-color: rgba(253, 101, 66, 0.2);
+}
