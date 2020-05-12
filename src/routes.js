@@ -2,13 +2,15 @@ import React, { useState, useEffect, createContext, useContext } from 'react'
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
 import ListTransaction from 'pages/ListTransaction'
 import DetailTransaction from 'pages/DetailTransaction'
-import response from 'dummy'
+import useFetch from 'hooks/useFetch'
 
 const INITIAL_FILTER = {
   search: '',
   sort: '',
   order: ''
 }
+
+const URL = 'https://nextar.flip.id/frontend-test'
 
 const AppContext = createContext()
 
@@ -17,12 +19,19 @@ function Routes() {
   const [transactions, setTransactions] = useState([])
   const [filter, setFilter] = useState(INITIAL_FILTER)
 
-  useEffect(() => {
-    const data = Object.values(response).map(value => value)
-    setTransactions(data)
-    setMasterData(data)
-  }, [])
+  const { isLoading, data: response } = useFetch({ url: URL, method: 'GET' })
 
+  useEffect(() => {
+    if (response) {
+      const data = Object.values(response).map(value => value)
+      setTransactions(data)
+      setMasterData(data)
+    }
+  }, [response])
+
+  /**
+   * This effect is to change the transaction data state when filter state is changed
+   */
   useEffect(() => {
     /** Filtering by input search */
     let newTransactions = masterData.filter(({
@@ -65,6 +74,7 @@ function Routes() {
   return (
     <AppContext.Provider
       value={{
+        isLoading,
         transactions,
         setTransactions,
         masterData,

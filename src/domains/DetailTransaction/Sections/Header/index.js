@@ -1,4 +1,5 @@
 import React, { useMemo } from 'react'
+import { Redirect } from 'react-router-dom'
 import Card from 'components/Molecules/Card'
 import styles from './Header.module.css'
 import { useStore } from 'routes'
@@ -8,6 +9,7 @@ function Header({ id }) {
 
   const transaction = useMemo(() => transactions.find(t => t.id === id), [id, transactions])
 
+  if (transactions.length === 0) return <Redirect to="/" />
   if (!transaction) return null
   return (
     <div className={styles.wrapper}>

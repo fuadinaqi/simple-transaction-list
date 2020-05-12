@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Card from 'components/Molecules/Card'
 import { Text } from 'components/Typography'
+import Paper from 'components/Atoms/Paper'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { formatCurrency, formatDate } from 'helpers'
@@ -9,7 +10,11 @@ import { useStore } from 'routes'
 import styles from './List.module.css'
 
 function ListSection({ history }) {
-  const { transactions } = useStore()
+  const { isLoading, transactions } = useStore()
+
+  if (isLoading) return new Array(5).fill().map((_, i) => (
+    <Paper key={i.toString()} height="52px" className={`${styles.card} shimmer`} />
+  ))
   return transactions.map(({
     id,
     status,
